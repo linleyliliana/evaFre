@@ -3,6 +3,7 @@ package com.example.evaluacinfrecuente;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -28,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("MainActivity", "onCreate");
 
-    adaptador=new ProductAdapter(this, android.R.layout.activity_list_item,productos);
+        adaptador=new ProductAdapter(this, android.R.layout.activity_list_item,productos);
         lstPro=(ListView) findViewById(R.id.lstProductos);
         lstPro.setAdapter(adaptador);
 
@@ -45,13 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
             //Cuando todo sale bien al conectarse a la API
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                Log.d("MainActivity", "onResponse");
                 List<Product> data = response.body();
                 productos.addAll(data);
                 adaptador.notifyDataSetChanged();
             }
             //Cuando hay error al conectarse a la API
             @Override
-            public void onFailure(Call<List<Product>> call, Throwable t)  {}
+            public void onFailure(Call<List<Product>> call, Throwable t)  {
+                Log.e("MainActivity", "Error al conectarse a la API", t);
+            }
         });
     }
 }

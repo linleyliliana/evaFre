@@ -8,9 +8,26 @@
 
     <ListView
         android:id="@+id/lstProductos"
-        android:layout_width="353dp"
-        android:layout_height="690dp"
+        android:layout_width="370dp"
+        android:layout_height="629dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="30dp"
+        android:text="LISTA DE PRODUCTOS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lstProductos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -2,9 +2,10 @@
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-        android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,15 +16,16 @@
             android:id="@+id/txtListID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="3dp"
             android:text="ID"
-            android:padding="3dp" />
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtListTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TITLE"
-        android:padding="3dp" />
+        <TextView
+            android:id="@+id/txtListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:padding="3dp" />
 
 
     </LinearLayout>
@@ -50,17 +52,16 @@
         android:padding="3dp"/>
 
     <TextView
-        android:id="@+id/txtListImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="IMAGE"
-        android:padding="3dp"/>
-
-    <TextView
         android:id="@+id/txtListRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RATING"
         android:padding="3dp"/>
+
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
 </LinearLayout>

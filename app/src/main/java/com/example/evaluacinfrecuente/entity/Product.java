@@ -1,4 +1,5 @@
 package com.example.evaluacinfrecuente.entity;
+import com.example.evaluacinfrecuente.Rating;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,17 +8,19 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter
-    @Setter
-    @NoArgsConstructor
-    @AllArgsConstructor
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
-    public class Product {
+public class Product {
 
-        private int id;
-        private String title;
-        private Double price;
-        private String description;
-        private String category;
-        private String image;
-        private String rating;
+    private int id;
+    private String title;
+    private Double price;
+    private String description;
+    private String category;
+    private String image;
+    //private Double rating;
+    private Rating rating;
+
 }
